@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+body {
+    background:  #797979;
+    height: min-content;
+}
+
+h1 {
+    font-weight: bold;
+    color: #797979;
+}
+
+p {
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #797979;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10fr 5fr;
+    grid-template-areas:
+        "main  main   main"
+        "who   what   why";
+}
+
+.search {
+    grid-area: main;
+    background: url("bg.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* margin-top: -10vh; */
+    transform: translate(0, -58px);
+    z-index: -1;
+    height: 100vh;
+}
+
+section {
+    text-align: center;
+    color: white;
+    padding-top: 24px;
+    transform: translate(0, -58px);
+    height: 40vh;
+}
+
+section.who {
+    grid-area: who;
+    background: #BCDC9C;    
+}
+
+section.what {
+    grid-area: what;
+    background: #AED688;  
+}
+
+section.why {
+    grid-area: why;
+    background: #A1CE75;  
+}
+
+.wrapper{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0,0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.wrapper .input {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#searchbtn {
+    background: #ffffff;
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+#searchbtn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+#searchbtn:hover{
+    background: #79BA3A;
+    color: #ffffff;
+    cursor: pointer;
+}
+
